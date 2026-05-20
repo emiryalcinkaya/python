@@ -31,11 +31,13 @@ def make_reservation(): # Make a reservation
                     print(reservation)
                 else: 
                     print("Room not available")
+                    make_reservation() # Recursion function calling
                 
                 break
 
     if not found:
         print("Invalid number")
+        make_reservation() # Recursion function calling
 
 def cancel_reservation(): # Cancel a reservation
     room_number = input("Enter room number: ")
@@ -54,11 +56,13 @@ def cancel_reservation(): # Cancel a reservation
                     print(cancelation)
                 else: 
                     print("Room not available")
+                    cancel_reservation() # Recursion function calling
                 
                 break
             
     if not found:
         print("Invalid number")
+        cancel_reservation() # Recursion function calling
 
 def get_reservation_history():
     print(reservation_history)
